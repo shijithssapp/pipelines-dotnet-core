@@ -36,5 +36,5 @@ steps:
     azureSubscription: devopsautomated
     appType: webApp
     appName: Tesdapp123321
-    package: $(System.DefaultWorkingDirectory)/**/*.zip
+    package: $(build.artifactstagingdirectory)/**/*.zip
 
