@@ -30,3 +30,10 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: devopsautomated
+    appType: webApp
+    appName: Testwebapp123321
+    package: $(build.artifactstagingdirectory)/**/*.zip
+
