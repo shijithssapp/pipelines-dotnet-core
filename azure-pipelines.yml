@@ -31,3 +31,10 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: devopsautomated
+    appType: webApp
+    appName: Tesdapp123321
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
+
